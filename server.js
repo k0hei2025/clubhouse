@@ -5,12 +5,15 @@ const io = require('socket.io')(http)
 
 
 io.on('connection', socket => {
-               // console.log('new user connection')
-               // socket.emit('chat-message', 'hey man its your first time isn"t ')
 
-               socket.on('roomNames', (roomName) => {
+               socket.on('roomName', (roomName) => {
                               io.emit('roomName', roomName)
                               console.log(roomName)
+               })
+
+               socket.on('people', (peopleName) => {
+                              io.emit('people', peopleName)
+                              console.log(peopleName)
                })
 
 
