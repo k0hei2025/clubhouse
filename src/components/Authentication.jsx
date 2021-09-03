@@ -99,7 +99,7 @@ export default function Authentication() {
                                                             <input type='submit' />
 
                                                             <button onClick={changeHandler} >{login ? <p> loginForm </p> : <p> Signup </p>} </button>
-                                                            <Link to='/joinRoom'>    <button>Go without Auth</button></Link>
+                                                            <Link to='/dashboard'>    <button>Go without Auth</button></Link>
 
                                              </form>
 
