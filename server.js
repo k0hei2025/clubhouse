@@ -15,7 +15,10 @@ io.on('connection', socket => {
                               io.emit('people', peopleName)
                               console.log(peopleName)
                })
-
+              socket.on('users',(user)=>{
+                io.emit("people",user.id)
+console.log(...user);
+              }
 
 })
 
